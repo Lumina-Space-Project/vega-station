@@ -1,0 +1,57 @@
+name: 🐛 Репорт об ошибке (Bug Report)
+description: Сообщить о баге или некорректной работе на станции
+title: "[Баг]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Спасибо, что помогаете улучшать **Lumina Space**! Пожалуйста, заполните форму ниже.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Описание проблемы
+      description: Четко и ясно опишите, что произошло.
+      placeholder: Например: При попытке взять инструмент в руку, игра зависает...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Шаги для воспроизведения
+      description: Что нужно сделать, чтобы баг повторился?
+      placeholder: |
+        1. Зайти за профессию инженера
+        2. Взять в руку лом
+        3. Кликнуть на шлюз...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: OS
+    attributes:
+      label: Ваша операционная система
+      options:
+        - Windows
+        - Linux
+        - macOS
+    validations:
+      required: true
+
+  - type: input
+    id: round-id
+    attributes:
+      label: ID Раунда (Если применимо)
+      placeholder: "Например: #1423"
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Проверки перед отправкой
+      options:
+        - label: Я проверил, что этого бага нет в списке уже открытых задач.
+          required: true
