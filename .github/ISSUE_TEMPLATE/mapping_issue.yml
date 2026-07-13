@@ -1,0 +1,60 @@
+name: "🗺️ Маппинг и Карты (Mapping Task)"
+description: Изменение существующих карт, исправление ошибок маппинга или добавление новых станций
+labels: ["Mapping", "Needs Triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Шаблон для работы со структурами, комнатами и космическими станциями. 🌌
+        Перед началом работы убедитесь, что вы используете актуальный мастер-билд для редактирования `.yml` файлов карт.
+
+  - type: dropdown
+    id: map-action
+    attributes:
+      label: Тип задачи
+      options:
+        - "Исправление бага на карте (Дыры, неработающие шлюзы, кривые провода)"
+        - "Редизайн существующего отдела / комнаты"
+        - "Создание новой карты / Шаттла / Руин"
+        - "Оптимизация (Удаление лишних сущностей для поднятия FPS)"
+    validations:
+      required: true
+
+  - type: input
+    id: map-name
+    attributes:
+      label: Название карты / локации
+      placeholder: "Например: Saltern, Delta, Box Station, Центральный Коридор"
+    validations:
+      required: true
+
+  - type: textarea
+    id: map-description
+    attributes:
+      label: Описание изменений
+      description: Что именно нужно сделать или исправить?
+      placeholder: "В инженерном отделе на карте Saltern кабельная сеть не подключена к СМЕС. Нужно проложить кабель..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Скриншоты или Схемы
+      description: Прикрепите скриншот проблемной зоны из игры/редактора или набросок новой планировки.
+      placeholder: "Перетащите файлы сюда..."
+    validations:
+      required: false
+
+  - type: dropdown
+    id: mapping-severity
+    attributes:
+      label: Критичность проблемы / Приоритет
+      description: Оцените масштаб проблемы для игрового процесса.
+      options:
+        - "Не задано"
+        - "Косметический дефект (неправильный цвет)"
+        - "Просто мешает играть"
+        - "Критическая (разгерметизация со старта, отсутствие прохода)"
+    validations:
+      required: true

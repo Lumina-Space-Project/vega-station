@@ -1,0 +1,68 @@
+name: "💡 Предложение / Идея (Feature Request)"
+description: Предложить новую механику, предмет, роль или карту для SS14
+labels: ["Enhancement", "Needs Triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Есть крутая идея для станции? Отлично! 🛰️
+        Пожалуйста, опишите её подробно, чтобы разработчики и геймдизайнеры смогли оценить задумку.
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Категория предложения
+      description: К какой части игры относится ваша идея?
+      options:
+        - "Игровая механика / Код (Content)"
+        - "Предмет / Одежда / Оружие"
+        - "Роль / Профессия / Антагонист"
+        - "Маппинг (Карты, помещения, структуры)"
+        - "Интерфейс (UI/UX) и Звуки, Текстуры"
+        - "Баланс и изменение существующих механик"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Какую проблему решает это нововведение?
+      description: Почему текущая механика скучная/неудобная или чего именно не хватает для фана?
+      placeholder: "Например: Сейчас у ботаников мало уникальных механик защиты, их легко убивают ассистенты..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Подробное описание идеи
+      description: Как именно это должно работать? Опишите механику, взаимодействия и логику.
+      placeholder: "Добавить ботаникам возможность выращивать плотоядные растения, которые кусают всех, кроме..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: balance-impact
+    attributes:
+      label: Влияние на баланс и геймплей
+      description: Не сделает ли это какую-то роль слишком сильной? Как это повлияет на раунд?
+      placeholder: "Растения требуют времени на выращивание, поэтому это не сломает старт раунда..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: media
+    attributes:
+      label: Медиа и примеры (скриншоты, концепты, референсы)
+      description: Если у вас есть готовые спрайты, наброски карт или примеры из SS13 — прикрепите их сюда.
+      placeholder: "Перетащите файлы сюда или вставьте ссылки..."
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: implementation
+    attributes:
+      label: Готовность помочь
+      options:
+        - label: "Я готов сам написать код / нарисовать спрайты (сделать Pull Request), если идею одобрят"
+          required: false

@@ -1,5 +1,9 @@
-blank_issues_enabled: true
+blank_issues_enabled: false
 contact_links:
-  - name: Request a Feature
-    url: https://discord.gg/rGvu9hKffJ
-    about: Submit feature requests on our Discord server (https://discord.gg/rGvu9hKffJ).
+  - name: Наш Discord сервер
+    url: https://discord.gg/QU6s5xnyRe
+    about: Задайте вопрос по разработке или обсудите геймплей здесь (https://discord.gg/QU6s5xnyRe).
+
+  - name: "⚖️ Апелляция банов"
+    url: "https://discord.gg/QU6s5xnyRe"
+    about: "Если вас забанили в игре, не пишите на GitHub. Используйте эту ссылку."

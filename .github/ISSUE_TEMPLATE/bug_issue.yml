@@ -1,0 +1,56 @@
+name: "🐛 Отчет об ошибке (Bug Report)"
+description: Сообщить о баге, механике или краше в SS14
+labels: ["Bug", "Needs Triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Спасибо за вклад в разработку космической станции! 🚀
+        Перед отправкой убедитесь, что этого бага еще нет в открытых Issue.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Описание проблемы
+      description: Четко и кратко опишите, что пошло не так.
+      placeholder: "Например: При попытке разобрать сингулярность ломом игра крашится у всех в радиусе видимости."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Шаги для воспроизведения
+      description: Опишите пошагово, как вызвать этот баг повторно.
+      placeholder: |
+        1. Взять в руки инструмент X.
+        2. Кликнуть по объекту Y в режиме Z.
+        3. Посмотреть на результат.
+    validations:
+      required: true
+
+  - type: input
+    id: round-id
+    attributes:
+      label: ID Раунда
+      description: Если известно, укажите ID раунда.
+      placeholder: "Round #12345"
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs-replays
+    attributes:
+      label: Логи, скриншоты или краш-дампы
+      description: Вставьте текст ошибки из консоли (`~`), логи или перетащите сюда скриншоты/видео.
+      placeholder: "Текст ошибки из Robust Toolbox..."
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: Checklist
+    attributes:
+      label: Дополнительная проверка
+      options:
+        - label: "Баг воспроизводится стабильно (каждый раз)"
+          required: false
